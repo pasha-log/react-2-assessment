@@ -14,6 +14,16 @@ class SnackOrBoozeApi {
 		const result = await axios.get(`${BASE_API_URL}/${productType}`);
 		return result.data;
 	}
+
+	static async createProduct(data) {
+		await axios.post(`${BASE_API_URL}/${data.productType}`, {
+			id: `${data.name.replace(/\s+/g, '-').toLowerCase()}`,
+			name: `${data.name}`,
+			description: `${data.description}`,
+			recipe: `${data.recipe}`,
+			serve: `${data.serve}`
+		});
+	}
 }
 
 export default SnackOrBoozeApi;

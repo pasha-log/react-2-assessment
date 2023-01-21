@@ -7,22 +7,33 @@ import NavBar from './NavBar';
 import { Route, Switch } from 'react-router-dom';
 import Menu from './ProductMenu';
 import Product from './ProductItem';
+import NewProductForm from './NewProductForm';
 
 function App() {
 	const [ isLoading, setIsLoading ] = useState(true);
 	const [ snacks, setSnacks ] = useState([]);
 	const [ drinks, setDrinks ] = useState([]);
 
-	useEffect(() => {
-		async function getProducts() {
-			let snacks = await SnackOrBoozeApi.getProducts('snacks');
-			let drinks = await SnackOrBoozeApi.getProducts('drinks');
-			setSnacks(snacks);
-			setDrinks(drinks);
-			setIsLoading(false);
+	useEffect(
+		() => {
+			async function getProducts() {
+				let snacks = await SnackOrBoozeApi.getProducts('snacks');
+				let drinks = await SnackOrBoozeApi.getProducts('drinks');
+				setSnacks(snacks);
+				setDrinks(drinks);
+				setIsLoading(false);
+			}
+			getProducts();
+		},
+		[ snacks, drinks ]
+	);
+
+	const addProduct = (json) => {
+		async function createProduct() {
+			await SnackOrBoozeApi.createProduct(json);
 		}
-		getProducts();
-	}, []);
+		createProduct();
+	};
 
 	if (isLoading) {
 		return <p>Loading &hellip;</p>;
@@ -49,8 +60,11 @@ function App() {
 						<Route path="/Drinks/:id">
 							<Product items={drinks} cantFind="/drinks" />
 						</Route>
+						<Route path="/new-product">
+							<NewProductForm addProduct={addProduct} />
+						</Route>
 						<Route>
-							<p>Hmmm. I can't seem to find what you want.</p>
+							<p className="Error">Hmmm. I can't seem to find what you want.</p>
 						</Route>
 					</Switch>
 				</main>
