@@ -8,9 +8,9 @@ function Home({ snacks, drinks }) {
 				<CardBody className="text-center">
 					<CardTitle>
 						<h3 className="font-weight-bold">Welcome to Silicon Valley's premier dive cafe!</h3>
-						<h5>
+						<p>
 							We have {snacks.length} different snacks & {drinks.length} different drinks...
-						</h5>
+						</p>
 					</CardTitle>
 				</CardBody>
 			</Card>

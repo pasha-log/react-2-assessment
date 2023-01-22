@@ -27,13 +27,6 @@
       "description": "Crisp!",
       "recipe": "Open can.",
       "serve": "Immediately."
-    },
-    {
-      "id": "molotov ",
-      "name": "Molotov ",
-      "description": "A make-shift grenade perfect for starting revolutions.",
-      "recipe": "A bottle of liquor, a piece of cloth, and a lighter.",
-      "serve": "Cloth lit on fire. "
     }
   ],
   "snacks": [
@@ -57,20 +50,6 @@
       "description": "Tart and delicious.",
       "recipe": "Mix arugula, toasted walnuts, and thinly-sliced Parmesan cheese. Dress with lemon and olive oil.",
       "serve": "Place on tiny, precious little plates."
-    },
-    {
-      "id": "vegan-dumplings",
-      "name": "Vegan Dumplings",
-      "description": "Another great snack for vegans. Filled with tofu and spices. ",
-      "recipe": "Wheat, tofu, turmeric, no salt seasoning.",
-      "serve": "Served with soy sauce or sweet chili glaze."
-    },
-    {
-      "id": "edamame",
-      "name": "Edamame",
-      "description": "Spicy garlic edamame that was deep fried.",
-      "recipe": "Edamame defrosted, deep fried for 30 seconds, spiced with shichimi and diced garlic.",
-      "serve": "On a small plate."
     }
   ]
 }
