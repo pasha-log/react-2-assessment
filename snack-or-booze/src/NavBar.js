@@ -8,7 +8,7 @@ function NavBar() {
 		<div>
 			<Navbar expand="md">
 				<NavLink exact to="/" className="navbar-brand">
-					Snack or Booze
+					🍴Snack or Booze🍸
 				</NavLink>
 
 				<Nav className="ml-auto" navbar>

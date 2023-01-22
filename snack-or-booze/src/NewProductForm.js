@@ -24,7 +24,6 @@ const NewProductForm = ({ addProduct }) => {
 	const handleSubmit = (e) => {
 		e.preventDefault();
 		addProduct({ ...formData });
-		// console.log(formData.name.toLowerCase());
 		setFormData(INITIAL_STATE);
 		history.push('/');
 	};

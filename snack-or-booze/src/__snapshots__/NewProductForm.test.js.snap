@@ -1,0 +1,152 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches snapshot 1`] = `
+<DocumentFragment>
+  <section
+    class="col-md-4"
+  >
+    <div
+      class="card"
+    >
+      <div
+        class="card-body"
+      >
+        <h5
+          class="font-weight-bold text-center card-title"
+        >
+          New Menu Item Form
+        </h5>
+        <form
+          class=""
+        >
+          <label
+            class=""
+          >
+            Product Type
+          </label>
+          <div
+            class="position-relative form-check"
+          >
+            <input
+              class="form-check-input"
+              name="productType"
+              type="radio"
+              value="snacks"
+            />
+             
+            <label
+              class="form-check-label"
+            >
+              Snack
+            </label>
+          </div>
+          <div
+            class="position-relative form-check"
+          >
+            <input
+              class="form-check-input"
+              name="productType"
+              type="radio"
+              value="drinks"
+            />
+             
+            <label
+              class="form-check-label"
+            >
+              Drink
+            </label>
+          </div>
+          <div
+            class="position-relative form-group"
+          >
+            <label
+              class=""
+              for="name"
+            >
+              Product name
+            </label>
+            <small
+              class="form-text text-muted"
+            >
+              What is the name of the product?
+            </small>
+            <input
+              class="form-control"
+              id="name"
+              name="name"
+              type="text"
+              value=""
+            />
+          </div>
+          <div
+            class="position-relative form-group"
+          >
+            <label
+              class=""
+              for="description"
+            >
+              Product description
+            </label>
+            <small
+              class="form-text text-muted"
+            >
+              What is the description of the product?
+            </small>
+            <textarea
+              class="form-control"
+              id="description"
+              name="description"
+            />
+          </div>
+          <div
+            class="position-relative form-group"
+          >
+            <label
+              class=""
+              for="recipe"
+            >
+              Product recipe
+            </label>
+            <small
+              class="form-text text-muted"
+            >
+              What is the recipe of the product?
+            </small>
+            <textarea
+              class="form-control"
+              id="recipe"
+              name="recipe"
+            />
+          </div>
+          <div
+            class="position-relative form-group"
+          >
+            <label
+              class=""
+              for="serve"
+            >
+              Product serve
+            </label>
+            <small
+              class="form-text text-muted"
+            >
+              How is the product served?
+            </small>
+            <textarea
+              class="form-control"
+              id="serve"
+              name="serve"
+            />
+          </div>
+          <button
+            class="btn btn-secondary"
+            type="button"
+          >
+            Submit
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+</DocumentFragment>
+`;
