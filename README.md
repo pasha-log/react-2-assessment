@@ -1,6 +1,6 @@
 # React Snack or Booze 
 
-<img src='./public/snack-or-booze.png' alt=''>
+<img src='./snack-or-booze/public/snack-or-booze.png' alt=''>
 
 ## Description: 
 
