@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Form, FormGroup, Label, Input, FormText, Button, Card, CardBody, CardTitle } from 'reactstrap';
+import { Form, FormGroup, Label, Input, Button, Card, CardBody, CardTitle } from 'reactstrap';
 import { useHistory } from 'react-router-dom';
 import './NewProductForm.css';
 
@@ -44,39 +44,44 @@ const NewProductForm = ({ addProduct }) => {
 						</FormGroup>
 						<FormGroup>
 							<Label for="name">Product name</Label>
-							<FormText>What is the name of the product?</FormText>
-							<Input id="name" name="name" value={formData.name} onChange={handleChange} />
+							<Input
+								id="name"
+								name="name"
+								value={formData.name}
+								placeholder="What is the name of the product?"
+								onChange={handleChange}
+							/>
 						</FormGroup>
 						<FormGroup>
 							<Label for="description">Product description</Label>
-							<FormText>What is the description of the product?</FormText>
 							<Input
 								id="description"
 								name="description"
 								type="textarea"
 								value={formData.description}
+								placeholder="What is the description of the product?"
 								onChange={handleChange}
 							/>
 						</FormGroup>
 						<FormGroup>
 							<Label for="recipe">Product recipe</Label>
-							<FormText>What is the recipe of the product?</FormText>
 							<Input
 								id="recipe"
 								name="recipe"
 								type="textarea"
 								value={formData.recipe}
+								placeholder="What is the recipe of the product?"
 								onChange={handleChange}
 							/>
 						</FormGroup>
 						<FormGroup>
 							<Label for="serve">Product serve</Label>
-							<FormText>How is the product served?</FormText>
 							<Input
 								id="serve"
 								name="serve"
 								type="textarea"
 								value={formData.serve}
+								placeholder="How is the product served?"
 								onChange={handleChange}
 							/>
 						</FormGroup>
