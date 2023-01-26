@@ -10,7 +10,9 @@ const Routes = () => {
 	const [ isLoading, setIsLoading ] = useState(true);
 	const [ snacks, setSnacks ] = useState([]);
 	const [ drinks, setDrinks ] = useState([]);
+	const [ itemNum, setItemNum ] = useState(0);
 
+	// this needs to manually check if the state has changed. If it has, then change it.
 	useEffect(
 		() => {
 			async function getProducts() {
@@ -22,13 +24,14 @@ const Routes = () => {
 			}
 			getProducts();
 		},
-		[ snacks, drinks ]
+		[ itemNum ]
 	);
 
 	const addProduct = (json) => {
 		async function createProduct() {
 			await SnackOrBoozeApi.createProduct(json);
 		}
+		setItemNum(itemNum + 1);
 		createProduct();
 	};
 

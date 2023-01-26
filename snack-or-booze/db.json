@@ -27,6 +27,13 @@
       "description": "Crisp!",
       "recipe": "Open can.",
       "serve": "Immediately."
+    },
+    {
+      "id": "molotov",
+      "name": "Molotov",
+      "description": "mnn",
+      "recipe": "mm",
+      "serve": "mnmn"
     }
   ],
   "snacks": [

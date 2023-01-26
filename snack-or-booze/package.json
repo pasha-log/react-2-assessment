@@ -1,6 +1,7 @@
 {
   "name": "snack-or-booze",
   "version": "0.1.0",
+  "homepage": "https://pasha-log.github.io/react-2-assessment",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
@@ -19,6 +20,8 @@
   },
   "scripts": {
     "start": "concurrently --kill-others \"npm run start-fe\" \"npm run start-be\"",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
@@ -39,5 +42,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "gh-pages": "^5.0.0"
   }
 }
