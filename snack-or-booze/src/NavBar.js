@@ -7,7 +7,7 @@ function NavBar() {
 	return (
 		<div>
 			<Navbar expand="md">
-				<NavLink exact to="/" className="navbar-brand">
+				<NavLink exact to="/react-2-assessment" className="navbar-brand">
 					🍴Snack or Booze🍸
 				</NavLink>
 

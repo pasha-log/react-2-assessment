@@ -49,7 +49,7 @@ const Routes = () => {
 
 	return (
 		<Switch>
-			<Route exact path="/">
+			<Route exact path="/react-2-assessment">
 				<Home snacks={snacks} drinks={drinks} />
 			</Route>
 			<Route exact path="/Snacks">

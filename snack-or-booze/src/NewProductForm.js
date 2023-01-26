@@ -25,7 +25,7 @@ const NewProductForm = ({ addProduct }) => {
 		e.preventDefault();
 		addProduct({ ...formData });
 		setFormData(INITIAL_STATE);
-		history.push('/');
+		history.push('/react-2-assessment');
 	};
 	return (
 		<section className="col-md-4">
