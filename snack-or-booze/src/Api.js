@@ -1,6 +1,6 @@
-import axios from 'axios';
+// import axios from 'axios';
 
-const BASE_API_URL = 'http://localhost:5000';
+// const BASE_API_URL = 'http://localhost:5000';
 
 /* 
   json-server will give you CRUD endpoints on snacks and drinks.
@@ -10,19 +10,40 @@ const BASE_API_URL = 'http://localhost:5000';
 */
 
 class SnackOrBoozeApi {
-	static async getProducts(productType) {
-		const result = await axios.get(`${BASE_API_URL}/${productType}`);
-		return result.data;
+	// Here is the axios version:
+	// static async getProducts() {
+	// static async getProducts(productType) {
+	// const result = await axios.get(`${BASE_API_URL}/${productType}`);
+	// return result.data;
+	// }
+	static getProducts() {
+		return JSON.parse(localStorage.getItem('data'));
 	}
 
-	static async createProduct(data) {
-		await axios.post(`${BASE_API_URL}/${data.productType}`, {
+	// Here is the axios version:
+	// static async createProduct(data) {
+	// 	await axios.post(`${BASE_API_URL}/${data.productType}`, {
+	// 		id: `${data.name.replace(/\s+/g, '-').toLowerCase()}`,
+	// 		name: `${data.name}`,
+	// 		description: `${data.description}`,
+	// 		recipe: `${data.recipe}`,
+	// 		serve: `${data.serve}`
+	// 	});
+	// }
+	static createProduct(data) {
+		let obj = {
 			id: `${data.name.replace(/\s+/g, '-').toLowerCase()}`,
 			name: `${data.name}`,
 			description: `${data.description}`,
 			recipe: `${data.recipe}`,
 			serve: `${data.serve}`
-		});
+		};
+		if (data.productType === 'snacks') {
+			JSON.parse(localStorage.getItem('data')).snacks.push(obj);
+		}
+		if (data.productType === 'drinks') {
+			JSON.parse(localStorage.getItem('data')).drinks.push(obj);
+		}
 	}
 }
 
