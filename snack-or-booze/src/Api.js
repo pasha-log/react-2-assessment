@@ -38,11 +38,18 @@ class SnackOrBoozeApi {
 			recipe: `${data.recipe}`,
 			serve: `${data.serve}`
 		};
+		let newData = JSON.parse(localStorage.getItem('data'));
+		const resetLocalStorage = () => {
+			localStorage.clear();
+			localStorage.setItem('data', JSON.stringify(newData));
+		};
 		if (data.productType === 'snacks') {
-			JSON.parse(localStorage.getItem('data')).snacks.push(obj);
+			newData.snacks.push(obj);
+			resetLocalStorage();
 		}
 		if (data.productType === 'drinks') {
-			JSON.parse(localStorage.getItem('data')).drinks.push(obj);
+			newData.drinks.push(obj);
+			resetLocalStorage();
 		}
 	}
 }
