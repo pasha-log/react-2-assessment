@@ -16,9 +16,9 @@ Now, though, the cafe has gotten its liquor license and relaunched itself as “
 * However, I shouldn’t have solved this by just cloning the FoodMenu and FoodItem components — I’d have so much duplicate code! Instead, I turned these into generic components that can work with either food or drink lists/items.
 * Now that I have more things on my menu, I added a page that lets site users add either a drink or a snack.
 
-The project is included with a node library, json-server, which creates a straightforward fully-featured JSON REST API from a JSON file, including the ability to update that JSON file when changes are made via POST/PATCH/DELETE. When you add drinks/snacks, you’re changing the file db.json in the application directory.
+The original project was included with a node library, json-server, which creates a straightforward fully-featured JSON REST API from a JSON file, including the ability to update that JSON file when changes are made via POST/PATCH/DELETE. When you add drinks/snacks, you’re changing the file db.json in the application directory.
 
-json-server is terrific for working on front-end code challenges that would benefit from a simple backend API, or small-scale personal projects where a custom backend server would be overkill.
+json-server is terrific for working on front-end code challenges that would benefit from a simple backend API, or small-scale personal projects where a custom backend server would be overkill. However, in order to be create a version that could be deployed to gh-pages I had to refactor the API logic to use localStorage instead of json-server. 
 
 This repository was an assessment in my Springboard SWE Track, so the other two files conceptual.md and unroll are included. conceptual.md contains questions I had to answer regarding React history and React router. And unroll was a function I had to write for pre-interview problem solving practice. 
 
@@ -41,7 +41,7 @@ For the above example, *unroll* should return [1, 2, 3, 4, 8, 12, 16, 15, 14, 13
 
 * [React.js](https://reactjs.org/)
 * [Reactstrap](https://reactstrap.github.io/?path=/docs/home-installation--page)
-* [json-server](https://github.com/typicode/json-server)
+* [json-server](https://my-json-server.typicode.com/)
 
 ## Initialization:
 
